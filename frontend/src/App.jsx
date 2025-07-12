@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import ProductPage from "./pages/ProductPage";
 import EcoProfile from "./pages/EcoProfile";
+import CartPage from "./pages/CartPage";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/products" element={<ProductPage />} />
         <Route path="/badges" element={<EcoProfile />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
     </Router>
   );

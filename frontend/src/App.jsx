@@ -9,6 +9,8 @@ import 'leaflet/dist/leaflet.css';
 import DeliveryDashboard from "./components/AI route Optimizer/DeliveryDashboard";
 import AIROUTE2 from "./pages/AIROUTE2";
 import AIROUTE from "./pages/AIROUTE";
+import SustainableProductMonitor from "./components/Monitoring/SustainableProductMonitor";
+import Monitor from "./pages/Monitor";
 
 const App = () => {
   return (
@@ -20,6 +22,7 @@ const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/green" element={<Greendashbaord />} />
         <Route path="/ai" element={<AIROUTE />} />
+        <Route path="/monitoring" element={<Monitor />} />
       </Routes>
     </Router>
   );

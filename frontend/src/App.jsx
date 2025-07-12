@@ -5,8 +5,10 @@ import ProductPage from "./pages/ProductPage";
 import EcoProfile from "./pages/EcoProfile";
 import CartPage from "./pages/CartPage";
 import Greendashbaord from "./pages/Greendashbaord";
-import AIROUTE from "./pages/AIROUTE";
 import 'leaflet/dist/leaflet.css';
+import DeliveryDashboard from "./components/AI route Optimizer/DeliveryDashboard";
+import AIROUTE2 from "./pages/AIROUTE2";
+import AIROUTE from "./pages/AIROUTE";
 
 const App = () => {
   return (

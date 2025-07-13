@@ -1,7 +1,19 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ComparisonModal = ({ isOpen, onClose }) => {
   const [selectedChoice, setSelectedChoice] = useState('regular'); // 'regular' or 'eco'
+  const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+    // Here you could also save the selected product to localStorage or context
+    const selectedProduct = selectedChoice === 'eco' ? ecoProduct : regularProduct;
+    console.log('Adding to cart:', selectedProduct);
+    
+    // Navigate to cart page
+    navigate('/cart');
+    onClose();
+  };
 
   const regularProduct = {
     title: "S-T INC Microfiber Cleaning Cloths",
@@ -217,7 +229,7 @@ const ComparisonModal = ({ isOpen, onClose }) => {
             marginTop: 32 
           }}>
             <button
-              onClick={onClose}
+              onClick={handleAddToCart}
               style={{
                 padding: "16px 48px",
                 backgroundColor: selectedChoice === 'eco' ? "#2d5a27" : "#0071dc",

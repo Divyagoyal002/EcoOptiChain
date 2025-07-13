@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/LandingPage/Navbar/Navbar";
 import SubNavbar from "../components/LandingPage/Navbar/SubNavbar";
 import Footer from "../components/LandingPage/Footer";
@@ -7,6 +8,12 @@ import ProductDetails from "../components/Product/ProductDetails";
 import ProductEcoRewards from "../components/Product/ProductEcoRewards";
 
 const EcoAlternativesCarousel = () => {
+  const navigate = useNavigate();
+  
+  const handleAddToCart = () => {
+    navigate('/cart');
+  };
+
   const ecoProducts = [
     {
       id: 1,
@@ -234,6 +241,7 @@ const EcoAlternativesCarousel = () => {
               }}
               onMouseEnter={(e) => (e.target.style.backgroundColor = "#1a3319")}
               onMouseLeave={(e) => (e.target.style.backgroundColor = "#2d5a27")}
+              onClick={handleAddToCart}
             >
               Add to Cart
             </button>

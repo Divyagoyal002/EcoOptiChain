@@ -11,6 +11,8 @@ import AIROUTE2 from "./pages/AIROUTE2";
 import AIROUTE from "./pages/AIROUTE";
 import SustainableProductMonitor from "./components/Monitoring/SustainableProductMonitor";
 import Monitor from "./pages/Monitor";
+import Admin from "./components/Admin/Admin";
+import Navbaradmin from "./components/Admin/Navbaradmin";
 
 const App = () => {
   return (
@@ -22,7 +24,7 @@ const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/green" element={<Greendashbaord />} />
         <Route path="/ai" element={<AIROUTE />} />
-        <Route path="/monitoring" element={<Monitor />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
   );

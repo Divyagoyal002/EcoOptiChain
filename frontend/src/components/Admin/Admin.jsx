@@ -25,7 +25,7 @@ import {
   Users,
   Factory,
   Lightbulb,
-  Gift
+  Route
 } from 'lucide-react';
 
 import {
@@ -46,14 +46,14 @@ import {
   RadialBarChart,
   RadialBar
 } from 'recharts';
+import NavbarAdmin from './Navbaradmin';
 import { useNavigate } from 'react-router-dom';
 
-
-const WalmartGreenDashboard = () => {
+const Admin = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [timeRange, setTimeRange] = useState('30d');
   const [animationKey, setAnimationKey] = useState(0);
-  const navigate = useNavigate(); 
+   const navigate = useNavigate(); 
 
   // Dummy data for various metrics
   const carbonFootprintData = [
@@ -220,73 +220,14 @@ const WalmartGreenDashboard = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-emerald-50">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b border-gray-200">
-        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">M</span>
-                </div>
-                <span className="text-2xl font-bold text-blue-600">MY IMPACT </span>
-              </div>
-              <div className="h-8 w-px bg-gray-300" />
-              <h1 className="text-xl font-semibold text-gray-900 flex items-center space-x-2">
-                <Leaf className="h-6 w-6 text-green-600" />
-                <span>Green Sustainability Dashboard</span>
-              </h1>
-            </div>
-            <div className="flex items-center space-x-4">
-              <select
-                value={timeRange}
-                onChange={(e) => setTimeRange(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-              >
-                <option value="7d">Last 7 days</option>
-                <option value="30d">Last 30 days</option>
-                <option value="90d">Last 90 days</option>
-                <option value="1y">Last year</option>
-              </select>
-              <div className="flex items-center space-x-2 px-4 py-2 bg-green-100 rounded-lg">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-green-700">Live Data</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div>
+        <NavbarAdmin/>
       </div>
 
-      <div className="w-full  mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Navigation Tabs */}
         <div className="flex flex-wrap gap-2 mb-8">
-          <TabButton
-            id="overview"
-            label="Overview"
-            icon={BarChart3}
-            active={activeTab === 'overview'}
-            onClick={setActiveTab}
-          />
-          <TabButton
-            id="carbon"
-            label="Carbon Footprint"
-            icon={Wind}
-            active={activeTab === 'carbon'}
-            onClick={setActiveTab}
-          />
-          <TabButton
-            id="waste"
-            label="Waste Management"
-            icon={Recycle}
-            active={activeTab === 'waste'}
-            onClick={setActiveTab}
-          />
-          <TabButton
-            id="energy"
-            label="Energy & Renewables"
-            icon={Battery}
-            active={activeTab === 'energy'}
-            onClick={setActiveTab}
-          />
+        
           <TabButton
             id="supply"
             label="Supply Chain"
@@ -301,17 +242,18 @@ const WalmartGreenDashboard = () => {
             active={activeTab === 'stores'}
             onClick={setActiveTab}
           />
-          <button
-                  onClick={() => navigate("/badges")}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg shadow ${
-                    activeTab === "routes"
-                      ? "bg-green-600 text-white"
-                      : "bg-white text-gray-600 border"
-                  }`}
-                >
-                  <Gift className="w-4 h-4" />
-                  <span className="font-semibold">My Rewards</span>
-                </button>
+
+           <button
+        onClick={() => navigate("/ai")}
+        className={`flex items-center gap-2 px-4 py-2 rounded-lg shadow ${
+          activeTab === "routes"
+            ? "bg-green-600 text-white"
+            : "bg-white text-gray-600 border"
+        }`}
+      >
+        <Route className="w-4 h-4" />
+        <span className="font-semibold">Routes</span>
+      </button>
         </div>
 
         {/* KPI Cards */}
@@ -469,267 +411,8 @@ const WalmartGreenDashboard = () => {
           </div>
         )}
 
-        {activeTab === 'carbon' && (
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h2 className="text-xl font-semibold text-gray-900 mb-6">Carbon Footprint Analysis</h2>
-              <div className="h-80">
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={carbonFootprintData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                    <XAxis dataKey="month" stroke="#6b7280" />
-                    <YAxis stroke="#6b7280" />
-                    <Tooltip
-                      contentStyle={{
-                        backgroundColor: 'white',
-                        border: '1px solid #e5e7eb',
-                        borderRadius: '8px',
-                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                      }}
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="emissions"
-                      stroke="#10B981"
-                      strokeWidth={3}
-                      dot={{ fill: '#10B981', strokeWidth: 2, r: 6 }}
-                      name="Actual Emissions"
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="target"
-                      stroke="#F59E0B"
-                      strokeWidth={2}
-                      strokeDasharray="5 5"
-                      dot={{ fill: '#F59E0B', strokeWidth: 2, r: 4 }}
-                      name="Target"
-                    />
-                    <Line
-                      type="monotone"
-                      dataKey="reduction"
-                      stroke="#8B5CF6"
-                      strokeWidth={2}
-                      dot={{ fill: '#8B5CF6', strokeWidth: 2, r: 4 }}
-                      name="Reduction %"
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Emission Sources</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Transportation</span>
-                    <span className="font-medium">42.3%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-red-500 h-2 rounded-full" style={{ width: '42.3%' }} />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Energy Consumption</span>
-                    <span className="font-medium">28.7%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-orange-500 h-2 rounded-full" style={{ width: '28.7%' }} />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Manufacturing</span>
-                    <span className="font-medium">19.2%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-yellow-500 h-2 rounded-full" style={{ width: '19.2%' }} />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Other</span>
-                    <span className="font-medium">9.8%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div className="bg-green-500 h-2 rounded-full" style={{ width: '9.8%' }} />
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Carbon Offset Initiatives</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
-                    <TreePine className="h-5 w-5 text-green-600" />
-                    <div>
-                      <p className="font-medium text-gray-900">Reforestation Projects</p>
-                      <p className="text-sm text-gray-600">45,230 trees planted this year</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
-                    <Wind className="h-5 w-5 text-blue-600" />
-                    <div>
-                      <p className="font-medium text-gray-900">Renewable Energy</p>
-                      <p className="text-sm text-gray-600">64% of energy from renewables</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg">
-                    <Truck className="h-5 w-5 text-purple-600" />
-                    <div>
-                      <p className="font-medium text-gray-900">Green Logistics</p>
-                      <p className="text-sm text-gray-600">Electric fleet covering 23% of routes</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {activeTab === 'waste' && (
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h2 className="text-xl font-semibold text-gray-900 mb-6">Waste Management Overview</h2>
-              <div className="h-80">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={wasteReductionData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                    <XAxis dataKey="category" stroke="#6b7280" />
-                    <YAxis stroke="#6b7280" />
-                    <Tooltip
-                      contentStyle={{
-                        backgroundColor: 'white',
-                        border: '1px solid #e5e7eb',
-                        borderRadius: '8px',
-                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                      }}
-                    />
-                    <Bar dataKey="current" fill="#EF4444" name="Current Waste" radius={[4, 4, 0, 0]} />
-                    <Bar dataKey="target" fill="#10B981" name="Target" radius={[4, 4, 0, 0]} />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Food Waste Prevention</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">AI-Powered Freshness</p>
-                      <p className="text-sm text-gray-600">GreenPod Labs integration</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <Lightbulb className="h-4 w-4 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Smart Inventory</p>
-                      <p className="text-sm text-gray-600">Predictive restocking</p>
-                    </div>
-                  </div>
-                  // ...existing code...
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
-                      <AlertCircle className="h-4 w-4 text-yellow-600" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Expiry Alerts</p>
-                      <p className="text-sm text-gray-600">Automated notifications</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                      <Package className="h-4 w-4 text-purple-600" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Optimized Packaging</p>
-                      <p className="text-sm text-gray-600">Eco-friendly materials</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Recycling & Reuse Initiatives</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                      <Recycle className="h-4 w-4 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Recycling Programs</p>
-                      <p className="text-sm text-gray-600">Store-wide participation</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <Globe className="h-4 w-4 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Global Partnerships</p>
-                      <p className="text-sm text-gray-600">Circular economy initiatives</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <Award className="h-4 w-4 text-emerald-600" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">Recognition</p>
-                      <p className="text-sm text-gray-600">Awarded for sustainability</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Impact Metrics</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Food Waste Reduced</span>
-                    <span className="font-medium text-green-600">45.8%</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Packaging Waste Reduced</span>
-                    <span className="font-medium text-blue-600">32.4%</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Electronics Waste Reduced</span>
-                    <span className="font-medium text-purple-600">58.9%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-           )}
-
-                   {activeTab === 'energy' && (
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h2 className="text-xl font-semibold text-gray-900 mb-6">Energy Consumption Overview</h2>
-              <div className="h-80">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={energyData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                    <XAxis dataKey="time" stroke="#6b7280" />
-                    <YAxis stroke="#6b7280" />
-                    <Tooltip
-                      contentStyle={{
-                        backgroundColor: 'white',
-                        border: '1px solid #e5e7eb',
-                        borderRadius: '8px',
-                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                      }}
-                    />
-                    <Bar dataKey="solar" fill="#F59E0B" name="Solar" />
-                    <Bar dataKey="wind" fill="#3B82F6" name="Wind" />
-                    <Bar dataKey="grid" fill="#10B981" name="Grid" />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-          </div>
-        )}
+       
+                  
 
         {activeTab === 'supply' && (
           <div className="space-y-8">
@@ -793,4 +476,4 @@ const WalmartGreenDashboard = () => {
   );
 };
 
-export default WalmartGreenDashboard;
+export default Admin;

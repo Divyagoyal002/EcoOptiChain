@@ -25,7 +25,7 @@ const badgeData = [
     title: "Planet Pal",
     earned: "2000 Carbon Coins",
     rewards: [
-      "You will get Mini plant delivered/Limited edition metal badge",
+      "You will get Mini plant delivered",
       "Saved 12.3 kg CO₂. Equal to 60 km of car travel avoided",
     ],
   },

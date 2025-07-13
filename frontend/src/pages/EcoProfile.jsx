@@ -11,9 +11,10 @@ const EcoProfile = () => (
   <>
     <Navbar />
     <SubNavbar />
+    <EcoProfileTree />
     <EcoProfileHeading />
     <EcoBadgeGrid />
-    <EcoProfileTree />
+    
     <EcoHowItWorksSection />
     <Footer />
   </>

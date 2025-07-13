@@ -33,7 +33,7 @@ const products = [
     delivery: 'Tomorrow',
   },
   {
-    image: 'https://i5.walmartimages.com/seo/Glass-Drinking-Cup-Portable-Straw-Bottle-Silica-Gel-Mason-Jars-with-Handle-Travel_1.jpg',
+    image: 'https://i5.walmartimages.com/seo/Glass-Drinking-Cup-Portable-Straw-Bottle-Silica-Gel-Mason-Jars-with-Handle-Travel_5e2d61ea-3aa0-4c20-9fd3-20e6d91a9b9e.ea6a4cb3ed6bc440dde418ee2e887141.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF',
     price: '$12.99',
     title: 'Glass Drinking Cup with Straw',
     description: 'Reusable, BPA-free, temperature retention.',

@@ -42,6 +42,7 @@ const App = () => {
         <Route path="/green" element={<Greendashbaord />} />
         <Route path="/ai" element={<AIROUTE />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/monitor" element={<Monitor />} />
       </Routes>
     </Router>
   );

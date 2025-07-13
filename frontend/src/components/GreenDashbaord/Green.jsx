@@ -312,6 +312,17 @@ const WalmartGreenDashboard = () => {
                   <Gift className="w-4 h-4" />
                   <span className="font-semibold">My Rewards</span>
                 </button>
+          <button
+                  onClick={() => navigate("/monitor")}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg shadow ${
+                    activeTab === "routes"
+                      ? "bg-green-600 text-white"
+                      : "bg-white text-gray-600 border"
+                  }`}
+                >
+                  <Gift className="w-4 h-4" />
+                  <span className="font-semibold">  Eco-Stats </span>
+                </button>
         </div>
 
         {/* KPI Cards */}

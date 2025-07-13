@@ -6,7 +6,7 @@ const menuItems = [
   {
     icon: (
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Walmart_deals_logo.svg"
+        src="https://www.shutterstock.com/image-vector/hot-deals-fire-vector-icon-600nw-2333316921.jpg"
         alt="Deals"
         className="h-7"
       />
@@ -50,20 +50,20 @@ const menuItems = [
   },
   {
     icon: (
-      <img src="https://i.imgur.com/2yaf2wb.png" alt="Dolls" className="h-7" />
+      <img src="https://png.pngtree.com/png-vector/20231014/ourmid/pngtree-cute-pink-doll-png-image_10294333.png" alt="Dolls" className="h-7" />
     ),
     label: "Dolls & dollhouses",
   },
   {
     icon: (
-      <img src="https://i.imgur.com/7Qp6wQy.png" alt="Lego" className="h-7" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png" alt="Lego" className="h-7" />
     ),
     label: "Lego & building sets",
   },
   {
     icon: (
       <img
-        src="https://i.imgur.com/8Q5Q2wT.png"
+        src="https://www.shutterstock.com/image-photo/bangkok-thailand-march-27-2016-600nw-2470443229.jpg"
         alt="Action figures"
         className="h-7"
       />
@@ -73,7 +73,7 @@ const menuItems = [
   {
     icon: (
       <img
-        src="https://i.imgur.com/1Q5Q2wT.png"
+        src="https://i.pinimg.com/736x/fd/df/33/fddf3348687c613613bd514be800c3ec.jpg"
         alt="Kids bikes"
         className="h-7"
       />

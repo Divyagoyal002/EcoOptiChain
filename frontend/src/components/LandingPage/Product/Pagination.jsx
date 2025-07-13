@@ -30,7 +30,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
-        <span className="text-xl">{'>'}</span>
+        <span className="text-xl">{'<'}</span>
       </button>
       {filteredPages.map((num, idx) =>
         num === '...' ? (

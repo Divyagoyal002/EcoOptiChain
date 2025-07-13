@@ -43,7 +43,7 @@ const SubNavbar = () => {
         <a href="#" className="hover:underline">Trending</a>
         <a href="#" className="hover:underline">Back to School</a>
         <a href="#" className="hover:underline">My Items</a>
-        <a href="#" className="hover:underline">Walmart+</a>
+        <a href="#" className="hover:underline">Greenmart+</a>
       </div>
       {/* Spacer */}
       <div className="flex-1" />

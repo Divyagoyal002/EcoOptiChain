@@ -192,7 +192,7 @@ const SustainableProductMonitor = () => {
       {/* Footer */}
       <div className="w-full max-w-6xl mt-12 mb-4 text-center z-10">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-          <span className="text-blue-600 font-semibold text-lg">Powered by Walmart Sustainability AI</span>
+          <span className="text-blue-600 font-semibold text-lg">Powered by Greenmart Sustainability AI</span>
           <span className="text-blue-400">|</span>
           <span className="text-blue-600 font-semibold text-lg">Together for a Greener Future</span>
         </div>

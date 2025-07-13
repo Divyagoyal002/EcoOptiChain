@@ -5,11 +5,11 @@ const Navbar = () => {
     <nav className="bg-[#0071dc] w-full flex items-center justify-between px-4 py-2">
       {/* Left section: logo, pickup, search */}
       <div className="flex items-center flex-1 min-w-0">
-        {/* Walmart spark icon */}
+        {/* Greenmart spark icon */}
         <div className="flex items-center mr-4 flex-shrink-0">
           <img
             src="https://brandingstyleguides.com/wp-content/guidelines/2025/01/walmart-web.jpg"
-            alt="Walmart Spark"
+            alt="Greenmart Spark"
             className="h-8 w-8"
             style={{ transform: "scale(1.7)", transformOrigin: "center" }}
           />
@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className="flex items-center bg-white rounded-full px-4 py-2 flex-1 min-w-0">
           <input
             type="text"
-            placeholder="Search everything at Walmart online and in store"
+            placeholder="Search everything at Greenmart online and in store"
             className="flex-1 outline-none bg-transparent text-black min-w-0"
           />
           <button>

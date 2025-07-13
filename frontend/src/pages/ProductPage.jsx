@@ -276,7 +276,7 @@ const ImpactMessage = () => (
       }}
     >
       Flip the script— go green, earn rewards, and wear your impact like a
-      badge...Walmart got you covered !
+      badge...Greenmart got you covered !
     </div>
   </div>
 );

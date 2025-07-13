@@ -1,9 +1,33 @@
-import React from 'react';
+import React from "react";
 
 const footerLinks = [
-  ['All Departments', 'Store Directory', 'Careers', 'Our Company', 'Sell on Wemart.com', 'Help', 'Product Recalls', 'Accessibility', 'Tax Exempt Program', 'Get the Wemart App', 'Safety Data Sheet'],
-  ['Terms of Use', 'Privacy Notice', 'California Supply Chain Act', 'Do Not Sell or Share My Personal Information', 'Request My Personal Information', 'California Privacy Rights', 'Your Privacy Choices', 'Returns and Exchanges', 'AdChoices', 'Government Health Data Privacy Notices', 'Brand Shop Directory'],
-  ['Pharmacy', 'Wemart Business', 'Wemart+']
+  [
+    "All Departments",
+    "Store Directory",
+    "Careers",
+    "Our Company",
+    "Sell on Greenmart.com",
+    "Help",
+    "Product Recalls",
+    "Accessibility",
+    "Tax Exempt Program",
+    "Get the Greenmart App",
+    "Safety Data Sheet",
+  ],
+  [
+    "Terms of Use",
+    "Privacy Notice",
+    "California Supply Chain Act",
+    "Do Not Sell or Share My Personal Information",
+    "Request My Personal Information",
+    "California Privacy Rights",
+    "Your Privacy Choices",
+    "Returns and Exchanges",
+    "AdChoices",
+    "Government Health Data Privacy Notices",
+    "Brand Shop Directory",
+  ],
+  ["Pharmacy", "Greenmart Business", "Greenmart+"],
 ];
 
 const Footer = () => (
@@ -11,17 +35,15 @@ const Footer = () => (
     <div className="max-w-screen-xl mx-auto flex flex-col items-center text-xs text-white">
       <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 mb-2">
         {footerLinks.flat().map((link, idx) => (
-          <a
-            key={idx}
-            href="#"
-            className="hover:underline"
-          >
+          <a key={idx} href="#" className="hover:underline">
             {link}
           </a>
         ))}
       </div>
       <div className="text-center text-[11px] text-white/80 mt-2">
-        © 2025 Wemart. The trademarks Wemart and the Wemart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
+        © 2025 Greenmart. The trademarks Greenmart and the Greenmart Spark
+        design are registered with the US Patent and Trademark Office. All
+        Rights Reserved.
       </div>
     </div>
   </footer>

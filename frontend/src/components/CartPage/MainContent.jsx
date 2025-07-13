@@ -10,7 +10,7 @@ const MainContent = () => {
       quantity: 1,
       freeReturns: true,
       giftEligible: true,
-      sellerId: "Walmart",
+      sellerId: "Greenmart",
       arrivalDate: "Fri, Jul 11"
     },
     {
@@ -21,7 +21,7 @@ const MainContent = () => {
       quantity: 1,
       freeReturns: true,
       protectionPlan: true,
-      sellerId: "Walmart",
+      sellerId: "Greenmart",
       arrivalDate: "Sun, Jul 13"
     }
   ]);
@@ -138,7 +138,7 @@ const MainContent = () => {
                             <svg className="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <span className="text-sm font-medium">Walmart Protection Plan by Allstate</span>
+                            <span className="text-sm font-medium">Greenmart Protection Plan by Allstate</span>
                           </div>
                           <div className="text-sm text-blue-600 underline cursor-pointer mb-2">View details</div>
                           <div className="text-xs text-gray-500 mb-2">(Only one option can be selected at a time.)</div>
@@ -236,15 +236,15 @@ const MainContent = () => {
               <div className="text-blue-600 underline cursor-pointer">Learn how</div>
             </div>
             
-            {/* Walmart+ Offer */}
+            {/* Greenmart+ Offer */}
             <div className="border-2 border-blue-600 rounded-lg p-4 mb-4">
               <div className="flex items-center mb-3">
-                <img src="/api/placeholder/80/20" alt="Walmart+" className="h-5 mr-2" />
+                <img src="/api/placeholder/80/20" alt="Greenmart+" className="h-5 mr-2" />
                 <span className="text-blue-600 font-medium">Limited time only</span>
               </div>
               <div className="flex items-center mb-3">
                 <input type="checkbox" className="mr-2" />
-                <span className="text-sm">Get 50% off a year of Walmart+. T&C apply.</span>
+                <span className="text-sm">Get 50% off a year of Greenmart+. T&C apply.</span>
               </div>
               <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
                 <span className="text-lg">🎁</span>

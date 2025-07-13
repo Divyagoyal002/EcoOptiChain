@@ -287,7 +287,7 @@ const WalmartGreenDashboard = () => {
             active={activeTab === 'energy'}
             onClick={setActiveTab}
           />
-          <TabButton
+          {/* <TabButton
             id="supply"
             label="Supply Chain"
             icon={Truck}
@@ -300,7 +300,7 @@ const WalmartGreenDashboard = () => {
             icon={Factory}
             active={activeTab === 'stores'}
             onClick={setActiveTab}
-          />
+          /> */}
           <button
                   onClick={() => navigate("/badges")}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg shadow ${

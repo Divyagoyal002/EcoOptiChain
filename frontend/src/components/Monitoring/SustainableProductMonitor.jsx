@@ -4,9 +4,9 @@ import { Leaf, Globe, TrendingUp, BarChart3, CheckCircle, Users, Award, Shopping
 const sustainableProducts = [
   {
     id: 1,
-    name: "EcoFresh Organic Apples",
-    brand: "GreenPod Labs",
-    image: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80",
+    name: "Full Circle Organic Cotton Cleaning Cloths",
+    brand: "G-Industry.",
+    image: "https://i5.walmartimages.com/seo/Full-Circle-Tidy-Organic-Cotton-Kitchen-Scrubbing-Dish-Cloths-12-x-12-Set-of-3-Multicolor_854a53dc-e3ce-47bd-8389-cecc9256ecab.c199fe8198b3205ae802ce678d83bb22.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
     sustainabilityScore: 4.9,
     carbonSaved: 1.2,
     waterSaved: 18,
@@ -21,9 +21,9 @@ const sustainableProducts = [
   },
   {
     id: 2,
-    name: "BioPack Compostable Plates",
+    name: "Leodye Eco-Friendly Air Freshener'",
     brand: "BioPack",
-    image: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80",
+    image: "https://i5.walmartimages.com/seo/Small-Spaces-Air-Freshener-for-Home-Lavender-Scent-6-Pack_a4b6a16f-cc84-4aa1-b041-b8d51c707976.2132e8fc63c48c8da69498464f6a3243.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
     sustainabilityScore: 4.7,
     carbonSaved: 0.8,
     waterSaved: 12,
@@ -38,9 +38,9 @@ const sustainableProducts = [
   },
   {
     id: 3,
-    name: "SolarCharge LED Bulb",
+    name: "WUSI Compostable Trash Bags",
     brand: "EcoLite",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+    image: "https://i5.walmartimages.com/seo/WUSI-Compostable-Trash-Bags-2-6-Gallon-Small-Disposable-Compost-Bags-100-Count-Garbage-Bags-Made-PSM-Starch-Based-Kitchen-Bathroom-Bedroom-Office-Tra_5a497218-562a-4197-9929-3aaf775f83f9.59cfd7a944cbbb17cd28da50c9fb261d.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
     sustainabilityScore: 4.8,
     carbonSaved: 2.1,
     waterSaved: 5,

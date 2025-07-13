@@ -1,14 +1,18 @@
 import React from 'react';
+import { User } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <nav className="bg-[#0071dc] w-full flex items-center justify-between px-4 py-2">
       {/* Left section: logo, pickup, search */}
       <div className="flex items-center flex-1 min-w-0">
         {/* Greenmart spark icon */}
-         <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">W</span>
-                </div>
+        <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+          <span className="text-white font-bold text-sm">W</span>
+        </div>
         {/* Pickup or delivery */}
         <button className="flex items-center bg-[#0053E4ff] text-white rounded-full px-4 py-2 mr-4 flex-shrink-0">
           <span className="mr-2">
@@ -41,9 +45,13 @@ const Navbar = () => {
           <span>Reorder</span>
           <span className="font-bold">My Items</span>
         </div>
-        <div className="flex flex-col items-center cursor-pointer">
-          <span>Sign In</span>
-          <span className="font-bold">Account</span>
+        {/* Profile Icon */}
+        <div
+          className="flex items-center justify-center cursor-pointer"
+          onClick={() => navigate('/green')}
+        >
+          <User className="h-6 w-6 mr-1 text-white" />
+          <span className="font-bold">Profile</span>
         </div>
         <div className="flex items-center cursor-pointer">
           <svg className="h-6 w-6 mr-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

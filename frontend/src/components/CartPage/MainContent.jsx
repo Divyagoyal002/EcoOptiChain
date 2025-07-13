@@ -4,9 +4,9 @@ const MainContent = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      name: "Mainstays by Becky G. & Alejandra 8.5\" Blue Stripe Ceramic Pitcher Vase",
-      price: 9.98,
-      image: "/api/placeholder/80/80",
+      name: "Full Circle Organic Cotton Cleaning Cloths",
+      price: 12.99,
+      image: "https://i5.walmartimages.com/seo/Full-Circle-Tidy-Organic-Cotton-Kitchen-Scrubbing-Dish-Cloths-12-x-12-Set-of-3-Multicolor_854a53dc-e3ce-47bd-8389-cecc9256ecab.c199fe8198b3205ae802ce678d83bb22.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
       quantity: 1,
       freeReturns: true,
       giftEligible: true,
@@ -15,9 +15,9 @@ const MainContent = () => {
     },
     {
       id: 2,
-      name: "Sceptre 43\" Class 1080P FHD LED TV X435BV-F",
-      price: 158.00,
-      image: "/api/placeholder/80/80",
+      name: "Leodye Eco-Friendly Air Freshener",
+      price: 8.99,
+      image: "https://i5.walmartimages.com/seo/Small-Spaces-Air-Freshener-for-Home-Lavender-Scent-6-Pack_a4b6a16f-cc84-4aa1-b041-b8d51c707976.2132e8fc63c48c8da69498464f6a3243.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
       quantity: 1,
       freeReturns: true,
       protectionPlan: true,
@@ -143,14 +143,7 @@ const MainContent = () => {
                           <div className="text-sm text-blue-600 underline cursor-pointer mb-2">View details</div>
                           <div className="text-xs text-gray-500 mb-2">(Only one option can be selected at a time.)</div>
                           <div className="space-y-1">
-                            <label className="flex items-center">
-                              <input type="checkbox" className="mr-2" />
-                              <span className="text-sm">3-Year Plan - $22.00</span>
-                            </label>
-                            <label className="flex items-center">
-                              <input type="checkbox" className="mr-2" />
-                              <span className="text-sm">4-Year Plan - $26.00</span>
-                            </label>
+                          
                           </div>
                         </div>
                       )}

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const footerLinks = [
-  ['All Departments', 'Store Directory', 'Careers', 'Our Company', 'Sell on Walmart.com', 'Help', 'Product Recalls', 'Accessibility', 'Tax Exempt Program', 'Get the Walmart App', 'Safety Data Sheet'],
+  ['All Departments', 'Store Directory', 'Careers', 'Our Company', 'Sell on Wemart.com', 'Help', 'Product Recalls', 'Accessibility', 'Tax Exempt Program', 'Get the Wemart App', 'Safety Data Sheet'],
   ['Terms of Use', 'Privacy Notice', 'California Supply Chain Act', 'Do Not Sell or Share My Personal Information', 'Request My Personal Information', 'California Privacy Rights', 'Your Privacy Choices', 'Returns and Exchanges', 'AdChoices', 'Government Health Data Privacy Notices', 'Brand Shop Directory'],
-  ['Pharmacy', 'Walmart Business', 'Walmart+']
+  ['Pharmacy', 'Wemart Business', 'Wemart+']
 ];
 
 const Footer = () => (
@@ -21,7 +21,7 @@ const Footer = () => (
         ))}
       </div>
       <div className="text-center text-[11px] text-white/80 mt-2">
-        © 2025 Walmart. The trademarks Walmart and the Walmart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
+        © 2025 Wemart. The trademarks Wemart and the Wemart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
       </div>
     </div>
   </footer>

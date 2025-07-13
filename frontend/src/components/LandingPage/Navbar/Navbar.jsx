@@ -6,14 +6,9 @@ const Navbar = () => {
       {/* Left section: logo, pickup, search */}
       <div className="flex items-center flex-1 min-w-0">
         {/* Walmart spark icon */}
-        <div className="flex items-center mr-4 flex-shrink-0">
-          <img
-            src="https://brandingstyleguides.com/wp-content/guidelines/2025/01/walmart-web.jpg"
-            alt="Walmart Spark"
-            className="h-8 w-8"
-            style={{ transform: "scale(1.7)", transformOrigin: "center" }}
-          />
-        </div>
+         <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">W</span>
+                </div>
         {/* Pickup or delivery */}
         <button className="flex items-center bg-[#0053E4ff] text-white rounded-full px-4 py-2 mr-4 flex-shrink-0">
           <span className="mr-2">

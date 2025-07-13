@@ -34,7 +34,7 @@ const ProductEcoRewards = () => (
   <aside style={{ maxWidth: 340, margin: "0 auto" }}>
     <ProductPriceBox />
     <h4 style={{ fontWeight: 600, fontSize: 18, margin: "24px 0 16px 0" }}>
-      Your Rewards for Choosing Green
+      Your Rewards for Not Choosing Green
     </h4>
     <div>
       {ecoRewards.map((r, i) => (
